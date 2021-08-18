@@ -34,6 +34,9 @@ body {
     margin: 0px;
 }
 
+/* 홈 네비바 */
+
+
 #header {
     width: 1440px;
     height: 72px;
@@ -85,6 +88,9 @@ body {
     font-weight: bold;
 }
 
+
+/* 네비바 아래 라인 */
+
 .one {
     color: #d8d8d8;
     opacity: 70%;
@@ -92,12 +98,13 @@ body {
     width: 1440px;
 }
 
-/* #mainall {
-    float: left;
-} */
+
+
+/* 홈 메인 */
+
 
 #all{
-    background-color: #f2f2f2c5;
+    background-color: rgb(245, 245, 245, 0.2);
     width: 1440px;
     height: 700px;
 }
@@ -165,8 +172,11 @@ body {
 
 }
 
+
+/* 홈 메인 페르소나(이모지) */
+
 #all2, #all3 {
-    background-color: rgba(0, 0, 255, 0.05);
+    background-color: rgba(70, 116, 202, 0.15);
     width: 1440px;
     height: 350px;
 }
@@ -237,6 +247,10 @@ body {
     color: #828282;
 
 }
+
+
+/* 홈 하단 회사정보 */
+
 
 #all4 {
     background-color: #f2f2f2c5;

@@ -178,3 +178,8 @@ h1 {
     color: #404041;
     padding-bottom: 48px;
 }
+
+#name {
+    display: block;
+    float: left;
+}

@@ -30,26 +30,56 @@
 
 <div id="all">
     <div id="main_content">
-        <h1>Sign Up</h1>
+        <h1>회원가입</h1>
 
         <form th:action="@{/user}" method="POST">
-            <div id="email">
-                email : <input type="text" name="email"> <br>
-            </div>
-            <div id="pw">
-                password : <input type="password" name="password"> <br>
-            </div>
             <div id="name">
-                name : <input type="text" name="name"> <br>
+                <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>성명</p>
+                <input type="text" name="name" placeholder="실명입력"> <br>
             </div>
+            
+            
             <div id="socialNumber">
-                social number : <input type="text" name="socialNumber"> <br>
+                <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>주민등록번호</p>
+                <input maxlength="6" type="tel" autocomplete="off" class="ld-input-inner" name="socialNumber"> - <input maxlength="7" type="tel" autocomplete="off" class="ld-input-inner" name="socialNumber">
             </div>
+
             <div id="mobileNumber">
-                 mobile number : <input type="text" name="mobileNumber"> <br>
+                <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>휴대폰 번호</p>
+                <select class="form-control" id="Number000" name='mobileNumber'>
+                    <option value='SKT'>SKT</option>
+                    <option value='KT'>KT</option>
+                    <option value='LG U+'>LG U+</option>
+                    <option value='SKT 알뜰폰'>SKT 알뜰폰</option>
+                    <option value='KT 알뜰폰'>KT 알뜰폰</option>
+                    <option value='LG U+ 알뜰폰'>LG U+ 알뜰폰</option>
+                </select>
+                <input type="tel" name="mobileNumber"  placeholder="전화번호">
+                <button id="mobileNumberRequest">인증요청</button>
             </div>
+
+            
+
+                <div id="agreePhone">
+                    <input type="checkbox" name="agreePhone" value="rgb(45, 107, 241);" checked>
+                    <p class="agree1">휴대폰 인증 동의(필수)</p>
+                    <p class="agree2">내용보기</p>
+                </div>
+                <br>
+               <br>
+         
+                <div id="agreeinfo">
+                    <input type="checkbox" name="agreeinfo" value="rgb(45, 107, 241);" checked>
+                    <p class="agree1">개인정보 제공 동의(필수)</p>
+                    <p class="agree3">내용보기</p>
+                </div>
+                
+
+            
+            
+
             <div id="account">
-                account : <input type="text" name="account"> <br>
+                <input type="text" name="account"> <br>
             </div>
             <div id="balance">
                   balance : <input type="text" name="balance"> <br>
@@ -65,6 +95,13 @@
 
             <button type="submit" id="btn">Join</button>
         </form> <br>
+
+        <div id="email">
+            <input type="text" name="email" placeholder="이메일"> <br>
+        </div>
+        <div id="pw">
+            <input type="password" name="password" placeholder="비밀번호"> <br>
+        </div>
 
         <a href="/login">Go to login →</a>
 

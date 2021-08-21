@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>채널을 자산으로, 머니튜브(Money Tube) 마이페이지</title>
+        <link rel="stylesheet" href="style_mypage.css">
+    </head>
+
+    <body>
+    
+        <!--네비 바-->
+
+        <div id="header">    
+            <div id="nav">  
+                    <img id="logo" src="img/Artboard Copy 10@3x.png" height="35">
+                    <ul id="menu">
+                        <li><a href="Loan.html">대출하기</a></li>
+                        <li><a href="Investment.html">투자하기</a></li>
+                        <li><a href="Mypage.html" style="color: blue; font-weight: bold;">마이페이지</a></li>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="Sign.html">회원가입</a></li>
+                    </ul>
+            </div> 
+        </div>
+        
+        <hr class="one">
+
+        <!--마이페이지 좌측 메뉴 바-->
+
+        <div id=left_bar>
+            <img id="person_image" src="person_image.png" width="165" height="165">
+            
+            <div id="name">
+                박성민
+            </div>
+            <br>
+
+            <div id="english_name">
+                Park Sung Min
+            </div>
+
+            <ul id="left_nav">
+                <li><a href="Mypage_invest.html">나의 투자상품 보기</a></li>
+                <li><a href="Mypage.html" style="color: blue; font-weight: bold;">나의 대출상품 보기</a></li>
+                <li><a href="">나의 전용계좌 입금하기</a></li>
+            </ul>
+        </div>
+
+
+
+        <!--고객별 상단 안내 바-->
+        
+        <div id="top_bar">   
+            <div id="early_remarks">
+                안녕하세요, 크리에이터 박성민님
+            </div>
+            <br><br>
+
+            <div id="current_status">
+                현재 2개의 상품에 대한 투자 모집이 진행 중이며 1개의 상품에 대한 대출금 상환이 약 68% 완료되었습니다.
+            </div>
+
+        <!--대출금액과 상환금액 표시-->
+
+        <div id="creatersum_box">
+            <div id="loanamount_title">
+                현재 대출금액
+            </div>
+            
+            <div id="repaymentamount_title">
+                현재 상환금액
+            </div>
+
+            <div id="nonrepaymentamount_title">
+                현재 미상환금액
+            </div>
+
+            <div id="deadlinedate_title">
+                대출금 상환 마감날짜
+            </div>
+
+            <div id="loanamount">
+                1,200,000
+            </div>
+
+            <div id="repaymentamount">
+                820,000
+            </div>
+
+            <div id="nonrepaymentamount">
+                380,000
+            </div>
+
+            <div id="deadlinedate">
+                2021/09/28
+            </div>
+
+        </div>
+
+        <!--크리에이터 별 투자 상품 리스트 안내-->
+
+        <ul id="product_manu">
+            <li><a href="Mypage.html" style="color: blue; font-weight: bold;">투자 모집 진행 중인 상품</a></li>
+            <li><a href="Mypage 2.html">대출금 상환이 완료된 상품</a></li>
+        </ul>
+        
+        <!--투자 모집 진행중인 상품 리스트 안내-->
+
+        <div id="listbox1">
+            <div id="seq">
+                <a style="color: blue; font-weight: bold;">상품코드&nbsp; </a>#006281
+            </div>
+
+            <img id=icon1_1 src="teddy-bear_1f9f8.png" width="25" height="25">
+            
+            <div id="listname1_1">
+                방구석 1열, 프라이빗 콘서트를 기획하고 있어요   
+            </div>
+
+            <div id="product_link">
+                투자 상품 페이지 바로가기 >
+            </div>
+
+            <div id="recruitment">
+                <a style="color: blue; font-weight: bold;">투자 모집비율</a>
+            
+            </div>
+            <style>
+                .graph {
+                    margin-left: 118px;
+                    margin-top: -13px;
+                    height: 10px;
+                    background: #eaeaea;
+                    border-radius: 10px;
+                    width: 35%;
+                }
+                .graph span {
+                    display: block;
+                    padding: 0 10px;
+                    height: 10px;
+                    line-height: 10px;
+                    background: rgb(45, 107, 241);
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    color: #fff;}
+
+                    .graph.stack1 span {animation: stack1 1.5s 1;}
+
+                @keyframes stack1{
+                    0% {width: 0; 
+                        color: rgba(255, 255, 255, 0);}
+                    100% {width: 74%;
+                        color: rgba(255, 255, 255, 1);}
+                    }
+            </style>
+    
+            <div class="graph stack1">
+                <span style="width: 74%;">&nbsp;</span>
+            </div>
+
+            <div id="interestrate">
+                <a style="color: blue; font-weight: bold;">투자 상품이율&nbsp;</a> 4.8%
+            </div>
+
+            <div id="investAt">
+                <a style="color: blue; font-weight: bold;">투자 기간&nbsp;</a> 2021/07/30 - 2021/08/30
+            </div>
+        </div>
+
+        <div id=any>
+
+        </div>
+
+        <div id="listbox2">
+            <div id="seq">
+                <a style="color: blue; font-weight: bold;">상품코드&nbsp; </a>#007325
+            </div>
+
+            <img id=icon2_1 src="musical-notes_1f3b6.png" width="25" height="25">
+            
+            <div id="listname2_1">
+                실시간으로 이야기 나눔, 토크콘서트와 함께 삶을 노래하다   
+            </div>
+
+            <div id="product_link">
+                투자 상품 페이지 바로가기 >
+            </div>
+
+            <div id="recruitment">
+                <a style="color: blue; font-weight: bold;">투자 모집비율</a>
+            </div>
+            <style>
+                .graph {
+                    margin-left: 118px;
+                    margin-top: -13px;
+                    height: 10px;
+                    background: #eaeaea;
+                    border-radius: 10px;
+                    width: 35%;
+                }
+                .graph span {
+                    display: block;
+                    padding: 0 10px;
+                    height: 10px;
+                    line-height: 10px;
+                    background: rgb(45, 107, 241);
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    color: #fff;}
+
+                .graph.stack2 span{animation: stack2 1.5s 1;}
+
+                @keyframes stack2{
+                    0% {width: 0; 
+                        color: rgba(255, 255, 255, 0);}
+                    100% {width: 45%;
+                        color: rgba(255, 255, 255, 1);}
+                    }
+            </style>
+    
+            <div class="graph stack2">
+                <span style="width: 45%;">&nbsp;</span>
+            </div>
+
+            <div id="interestrate""\>
+                <a style="color: blue; font-weight: bold;">투자 상품이율&nbsp;</a> 4.3%
+            </div>
+
+            <div id="investAt">
+                <a style="color: blue; font-weight: bold;">투자 기간&nbsp;</a> 2021/08/11 - 2021/09/11
+            </div>
+        
+    </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>채널을 자산으로, 머니튜브(Money Tube) 마이페이지</title>
+        <link rel="stylesheet" href="style_mypage.css">
+    </head>
+
+    <body>
+    
+        <!--네비 바-->
+
+        <div id="header">    
+            <div id="nav">  
+                    <img id="logo" src="img/Artboard Copy 10@3x.png" height="35">
+                    <ul id="menu">
+                        <li><a href="Loan.html">대출하기</a></li>
+                        <li><a href="Investment.html">투자하기</a></li>
+                        <li><a href="Mypage.html" style="color: blue; font-weight: bold;">마이페이지</a></li>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="Sign.html">회원가입</a></li>
+                    </ul>
+            </div> 
+        </div>
+        
+        <hr class="one">
+
+        <!--마이페이지 좌측 메뉴 바-->
+
+        <div id=left_bar>
+            <img id="person_image" src="person_image.png" width="165" height="165">
+            
+            <div id="name">
+                박성민
+            </div>
+            <br>
+
+            <div id="english_name">
+                Park Sung Min
+            </div>
+
+            <ul id="left_nav">
+                <li><a href="Mypage_invest.html" style="color: blue; font-weight: bold;">나의 투자상품 보기</a></li>
+                <li><a href="Mypage.html" >나의 대출상품 보기</a></li>
+                <li><a href="">나의 전용계좌 입금하기</a></li>
+            </ul>
+
+        </div>
+
+
+
+        <!--고객별 상단 안내 바-->
+        
+        <div id="top_bar2">   
+            <div id="early_remarks2">
+                안녕하세요, 투자자 박성민님
+            </div>
+            <br><br>
+
+            <div id="current_status2">
+                현재 3개의 상품에 대한 투자를 하신 상태이며 1개의 상품에 대한 투자금 상환이 약 74% 완료되었습니다.
+            </div>
+
+        <!--투자금액과 한도금액 표시-->
+
+        <div id="creatersum_box">
+            <div id="invAmount_title">
+                현재 투자금액
+            </div>
+            
+            <div id="investmentlimit_title">
+                현재 투자한도
+            </div>
+
+            <div id="possibility_title">
+                현재 투자가능금액
+            </div>
+
+            <div id="invest_deadlinedate_title">
+                투자금 상환 완료날짜
+            </div>
+
+            <div id="invAmount">
+                4,100,000
+            </div>
+
+            <div id="investmentlimit">
+                11,250,000
+            </div>
+
+            <div id="possibility">
+                7,150,000
+            </div>
+
+            <div id="invest_deadlinedate">
+                2021/09/13
+            </div>
+
+        </div>
+
+        <!--크리에이터 별 투자 상품 리스트 안내-->
+
+        <ul id="product_manu2">
+            <li><a href="Mypage_invest.html" >투자 결정이 완료된 상품</a></li>
+            <li><a href="Mypage_invest 2.html" style="color: #0070EA; font-weight: bold;">투자금 상환이 완료된 상품</a></li>
+        </ul>
+        
+        <!--투자결정이 완료된 상품 리스트 안내-->
+
+        <div id="listbox1">
+            <div id="seq">
+                <a style="color: #0070EA; font-weight: bold;">상품코드&nbsp; </a>#002809
+            </div>
+
+            <img id=icon1_4 src="magic-wand_1fa84.png" width="25" height="25">
+            
+            <div id="listname1_4">
+                기획 시리즈 2) 해리와 론의 마법사 체스 ASMR   
+            </div>
+
+            <div id="product_link">
+                투자 상품 페이지 바로가기 >
+            </div>
+
+            <div id="recruitment">
+                <a style="color: #0070EA; font-weight: bold;">투자 상환비율</a>
+            
+            </div>
+            <style>
+                .graph {
+                    margin-left: 118px;
+                    margin-top: -13px;
+                    height: 10px;
+                    background: #eaeaea;
+                    border-radius: 10px;
+                    width: 35%;
+                }
+                .graph span {
+                    display: block;
+                    padding: 0 10px;
+                    height: 10px;
+                    line-height: 10px;
+                    background: #97C9FF;
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    color: #fff;}
+
+                    .graph.stack1 span {animation: stack1 1.5s 1;}
+
+                @keyframes stack1{
+                    0% {width: 0; 
+                        color: rgba(255, 255, 255, 0);}
+                    100% {width: 90%;
+                        color: rgba(255, 255, 255, 1);}
+                    }
+            </style>
+    
+            <div class="graph stack1">
+                <span style="width: 90%;">&nbsp;</span>
+            </div>
+
+            <div id="interestrate">
+                <a style="color: #0070EA; font-weight: bold;">투자 상품이율&nbsp;</a> 3.9%
+            </div>
+
+            <div id="investAt">
+                <a style="color: #0070EA; font-weight: bold;">투자 기간&nbsp;</a> 2020/06/21 - 2021/07/21
+            </div>
+        </div>
+
+        <div id=any>
+
+        </div>
+
+        <div id="listbox2">
+            <div id="seq">
+                <a style="color: #0070EA; font-weight: bold;">상품코드&nbsp; </a>#003105
+            </div>
+
+            <img id=icon2_4 src="grinning-face_1f600.png" width="25" height="25">
+            
+            <div id="listname2_4">
+                PLAYLIST ORIGINAL - 하찮아도 괜찮아 웹드라마 시즌 3
+            </div>
+
+            <div id="product_link">
+                투자 상품 페이지 바로가기 >
+            </div>
+
+            <div id="recruitment">
+                <a style="color: #0070EA; font-weight: bold;">투자 상환비율</a>
+            </div>
+            <style>
+                .graph {
+                    margin-left: 118px;
+                    margin-top: -13px;
+                    height: 10px;
+                    background: #eaeaea;
+                    border-radius: 10px;
+                    width: 35%;
+                }
+                .graph span {
+                    display: block;
+                    padding: 0 10px;
+                    height: 10px;
+                    line-height: 10px;
+                    background: #97C9FF;
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    color: #fff;}
+
+                .graph.stack2 span{animation: stack2 1.5s 1;}
+
+                @keyframes stack2{
+                    0% {width: 0; 
+                        color: rgba(255, 255, 255, 0);}
+                    100% {width: 82%;
+                        color: rgba(255, 255, 255, 1);}
+                    }
+            </style>
+    
+            <div class="graph stack2">
+                <span style="width: 82%;">&nbsp;</span>
+            </div>
+
+            <div id="interestrate""\>
+                <a style="color: #0070EA; font-weight: bold;">투자 상품이율&nbsp;</a> 3.1%
+            </div>
+
+            <div id="investAt">
+                <a style="color: #0070EA; font-weight: bold;">투자 기간&nbsp;</a> 2020/09/17 - 2021/10/17
+            </div>
+        </div>
+
+    </body>
+</html>

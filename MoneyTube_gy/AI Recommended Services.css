@@ -215,7 +215,21 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: 20px;
+    margin-left: -150px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0px 0px 5px #d8d8d8;
+    border-radius: 14px;
+}
+
+#creatersum_box3 {
+    width: 340px;
+    height: 220px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
     margin-top: 50px;
     text-align: center;
     box-shadow: 0px 0px 5px #d8d8d8;

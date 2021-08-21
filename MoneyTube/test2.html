@@ -1,0 +1,199 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"></html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml"></html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>대출하기_1분금리한도조회
+    </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function setDisplay() {
+        if ($('input:radio[id=af]').is(':checked')) { //개인
+            $('#agencyF').show();
+            $('#agencyT').hide();
+        } else {
+            $('#agencyF').hide();
+            $('#agencyT').show();
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="test2.css">
+    <link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+<!-- 네비바 -->
+    
+<div id="header">    
+    <div id="nav">  
+            <img id="logo" src="img/Artboard Copy 10@3x.png" height="35">
+            <ul id="menu">
+                <li><a href="Loan.html" style="color: blue; font-weight: bold;">대출하기</a></li>
+                <li><a href="Investment.html">투자하기</a></li>
+                <li><a href="Mypage.html">마이페이지</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="signup.html" >회원가입</a></li>
+            </ul>
+    </div> 
+</div>
+
+<!-- 네비바 아래 라인 -->
+
+<hr class="one">
+
+<!-- 대출하기 -->
+
+<div class="section">
+	<input type="radio" name="slide" id="slide01" checked>
+	<input type="radio" name="slide" id="slide02">
+	<input type="radio" name="slide" id="slide03">
+	<div class="slide-wrap">
+		<ul class="slidelist">
+			<li>
+				<a>
+						<div id="main_content">
+                        
+                        
+                            <div id="btn" style="padding: 10px;">
+                                <div class="btn_left">
+                                    <label for="slide03" class="left" style="width: 183px; height: 36px; padding: 10px 12px 10px 12px; line-height: 36px;
+        background-color:blue; color:white; border-radius: 5px; margin-top:330px; text-align: center; font-family: 'NanumSquare'; background-color: rgb(45, 107, 241); letter-spacing: 1px; font-size: 16px; margin-left:-215px;">이전</label>
+                                </div>
+                                <div class="btn_right">
+                                    <label for="slide02" class="right"style="width: 183px; height: 36px; padding: 10px 12px 10px 12px; line-height: 36px;
+                                    background-color:blue; color:white; border-radius: 5px; margin-top:330px; text-align: center; font-family: 'NanumSquare'; background-color: rgb(45, 107, 241); letter-spacing: 1px; font-size: 16px; margin-left:15px;">다음</label>
+                                </div>
+                            </div>
+                            
+                      
+                        
+                
+                            <h2>1. 금리 한도 조회를 위한 본인인증을 해주세요</h2> 
+                            
+                            <form th:action="@{/user}" method="POST">
+                                <div id="name">
+                                    <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>성명</p>
+                                    <input type="text" name="name" placeholder="실명입력"> <br>
+                                </div>
+                                
+                                
+                                <div id="socialNumber">
+                                    <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>주민등록번호</p>
+                                    <input maxlength="6" type="tel" autocomplete="off" class="ld-input-inner" name="socialNumber"> - <input maxlength="7" type="tel" autocomplete="off" class="ld-input-inner" name="socialNumber">
+                                </div>
+                    
+                                <div id="mobileNumber">
+                                    <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>휴대폰 번호</p>
+                                    <select class="form-control" id="Number000" name='mobileNumber'>
+                                        <option value='SKT'>SKT</option>
+                                        <option value='KT'>KT</option>
+                                        <option value='LG U+'>LG U+</option>
+                                        <option value='SKT 알뜰폰'>SKT 알뜰폰</option>
+                                        <option value='KT 알뜰폰'>KT 알뜰폰</option>
+                                        <option value='LG U+ 알뜰폰'>LG U+ 알뜰폰</option>
+                                    </select>
+                                    <input type="tel" name="mobileNumber"  placeholder="전화번호">
+                                    <button id="mobileNumberRequest">인증요청</button> <br>  
+                                </div>
+                    
+                                <div id="number000000">
+                                    <input maxlength="6" type="tel" autocomplete="off" class="ld-input-inner" name="number000000" placeholder="인증번호"> 
+                                    <button id="numberdone">인증완료</button> <br> 
+                                </div>
+                                
+                    
+                            
+                                <div id="agreePhone">
+                                    <input type="checkbox" name="agreePhone" value="rgb(45, 107, 241);" unchecked>
+                                    <p class="agree1">휴대폰 인증 동의(필수)</p>
+                                    <p class="agree2">내용보기</p>
+                                </div>
+                   
+                    </div>
+				
+					<!-- 다음버튼 -->
+					
+				</a>
+			</li>
+			<li>
+				<a>
+                    <div id="main_content">
+                        <div class="btn_left">
+                            <label for="slide01" class="left" style="width: 183px; height: 36px; padding: 10px 12px 10px 12px; line-height: 36px;
+background-color:blue; color:white; border-radius: 5px; margin-top:330px; text-align: center; font-family: 'NanumSquare'; background-color: rgb(45, 107, 241); letter-spacing: 1px; font-size: 16px; margin-left:-215px;">이전</label>
+                        </div>
+                        <div class="btn_right">
+                            <label for="slide03" class="right"style="width: 183px; height: 36px; padding: 10px 12px 10px 12px; line-height: 36px;
+                            background-color:blue; color:white; border-radius: 5px; margin-top:330px; text-align: center; font-family: 'NanumSquare'; background-color: rgb(45, 107, 241); letter-spacing: 1px; font-size: 16px; margin-left:15px;">다음</label>
+                        </div>
+					
+                    <h2>2. 개인/MCN 정보를 입력해 조건을 확인해보세요</h2> 
+                            
+                            <form th:action="@{/user}" method="POST">
+                                <div id="email">
+                                    <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>이메일</p>
+                                    <input type="text" name="email" placeholder="서류제출사항이 안내됩니다."> <br>
+                                </div>
+                    
+
+                                <div id="check">
+                                    <form th:action="@{/loan-apply}" method="POST">
+                                        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                                        
+                                        <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-bottom: 20px;" float:>직업구분</p>
+                                        <input type="radio" id="af" name="agency" checked="checked" value="false" onchange="setDisplay()"><span>개인</span><br>
+                                        <input type="radio" id="at" name="agency" value="true" onchange="setDisplay()"><span>소속</span><br>
+                                        <div id="agencyF">
+                                            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-top: 20px;" float:>사업자 번호</p>
+                                            <input type="text" name="businessNumber"> <br>
+                                            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>상호명</p>
+                                            <input type="text" name="businessName"> <br>
+                                        </div>
+                                        <div id="agencyT" style="display:none;">
+                                            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-top: 20px;" float:>소속 회사명</p> 
+                                            <input type="text" name="companyName" placeholder="ex: (주)머니튜브"> <br>
+                                            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>정산일</p>
+                                            <input type="text" name="companyPayday" placeholder="ex: 매달 15일"> <br>
+                                        </div>
+                                    </form>
+                                </div>
+    
+				</a>
+			</li> 
+
+			<li>
+				<a> 
+                    <div id="main_content" >
+                    <div class="btn_left">
+                    <label for="slide02" class="left" style="width: 183px; height: 36px; padding: 10px 12px 10px 12px; line-height: 36px;
+background-color:blue; color:white; border-radius: 5px; margin-top:500px; text-align: center; font-family: 'NanumSquare'; background-color: rgb(45, 107, 241); letter-spacing: 1px; font-size: 16px; margin-left:-215px;">이전</label>
+                </div>
+                <div class="btn_right">
+                    <label for="slide01" class="right"style="width: 183px; height: 36px; padding: 10px 12px 10px 12px; line-height: 36px;
+                    background-color:blue; color:white; border-radius: 5px; margin-top:500px; text-align: center; font-family: 'NanumSquare'; background-color: rgb(45, 107, 241); letter-spacing: 1px; font-size: 16px; margin-left:15px;">다음</label>
+                </div>
+                
+                    <h1>안녕?</h1>
+                    <h2>하세요?</h2>
+                    <h3>너무</h3>
+                    <h4>힘들어요</h4>
+                    <h5>살려주세요</h5>
+                    <h6>허허</h6>
+                    <h1>집가야지</h1>
+                    <h2>모두들 화이팅</h2>
+
+                
+
+				
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+</body>
+</html>

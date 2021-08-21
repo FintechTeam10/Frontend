@@ -29,51 +29,53 @@
 
 <!-- 회원가입 -->
 
-<div id="all_signup">
-    <div id="main_content">
-        <h1>회원가입</h1>
-
-        <h2>기본정보 입력</h2> 
+<div id="all_signup" >
+        <div id="main_content" margin>
+            <h1>회원가입</h1>
+    
         
-
-        <form th:action="@{/user}" method="POST">
-            <div id="name">
-                <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>성명</p>
-                <input type="text" name="name" placeholder="실명입력"> <br>
-            </div>
+            <h2>기본정보 입력</h2> 
             
+    
+            <form th:action="@{/user}" method="POST">
+                <div id="name">
+                    <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>성명</p>
+                    <input type="text" name="name" placeholder="실명입력"> <br>
+                </div>
+                
+                
+                <div id="socialNumber">
+                    <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>주민등록번호</p>
+                    <input maxlength="6" type="tel" autocomplete="off" class="ld-input-inner" name="socialNumber"> - <input maxlength="7" type="tel" autocomplete="off" class="ld-input-inner" name="socialNumber">
+                </div>
+    
+                <div id="mobileNumber">
+                    <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>휴대폰 번호</p>
+                    <select class="form-control" id="Number000" name='mobileNumber'>
+                        <option value='SKT'>SKT</option>
+                        <option value='KT'>KT</option>
+                        <option value='LG U+'>LG U+</option>
+                        <option value='SKT 알뜰폰'>SKT 알뜰폰</option>
+                        <option value='KT 알뜰폰'>KT 알뜰폰</option>
+                        <option value='LG U+ 알뜰폰'>LG U+ 알뜰폰</option>
+                    </select>
+                    <input type="tel" name="mobileNumber"  placeholder="전화번호">
+                    <button id="mobileNumberRequest">인증요청</button> <br>  
+                </div>
+    
+                <div id="number000000">
+                    <input maxlength="6" type="tel" autocomplete="off" class="ld-input-inner" name="number000000" placeholder="인증번호"> 
+                    <button id="numberdone">인증완료</button> <br> 
+                </div>
+                
+    
             
-            <div id="socialNumber">
-                <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>주민등록번호</p>
-                <input maxlength="6" type="tel" autocomplete="off" class="ld-input-inner" name="socialNumber"> - <input maxlength="7" type="tel" autocomplete="off" class="ld-input-inner" name="socialNumber">
-            </div>
-
-            <div id="mobileNumber">
-                <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>휴대폰 번호</p>
-                <select class="form-control" id="Number000" name='mobileNumber'>
-                    <option value='SKT'>SKT</option>
-                    <option value='KT'>KT</option>
-                    <option value='LG U+'>LG U+</option>
-                    <option value='SKT 알뜰폰'>SKT 알뜰폰</option>
-                    <option value='KT 알뜰폰'>KT 알뜰폰</option>
-                    <option value='LG U+ 알뜰폰'>LG U+ 알뜰폰</option>
-                </select>
-                <input type="tel" name="mobileNumber"  placeholder="전화번호">
-                <button id="mobileNumberRequest">인증요청</button> <br>  
-            </div>
-
-            <div id="number000000">
-                <input maxlength="6" type="tel" autocomplete="off" class="ld-input-inner" name="number000000" placeholder="인증번호"> 
-                <button id="numberdone">인증완료</button> <br> 
-            </div>
-            
-
-        
-            <div id="agreePhone">
-                <input type="checkbox" name="agreePhone" value="rgb(45, 107, 241);" unchecked>
-                <p class="agree1">휴대폰 인증 동의(필수)</p>
-                <p class="agree2">내용보기</p>
-            </div>
+                <div id="agreePhone">
+                    <input type="checkbox" name="agreePhone" value="rgb(45, 107, 241);" unchecked>
+                    <p class="agree1">휴대폰 인증 동의(필수)</p>
+                    <p class="agree2">내용보기</p>
+                </div>
+   
             <br>
             <br>
          
@@ -160,14 +162,24 @@
                 <button id="wonRequest">1원 송금 인증 요청</button> <br> 
             </div>
             
-            
-
             <button type="submit" id="btn_join">회원가입하기</button>
+
+           
         </form>
 
 
     </div>
+
+   
     
 </div>
+<!-- 
+<script>
+    document.querySelector('#numberdone').addEventListener('click', function(){document.querySelector('.Q_main').style.transform='translate(-50vw)';});
+    </script>
+
+<script>
+    document.querySelector('.btn2').addEventListener('click', function(){document.querySelector('.Q_main').style.transform='translate(-100vw)';});
+    </script>    -->
 </body>
 </html>

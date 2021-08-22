@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_loan.css">
+    <link rel="stylesheet" href="style.css">
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/img/Artboard Copy 12@3x.png}">
+    <title>대출</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function setDisplay() {
+        if ($('input:radio[id=af]').is(':checked')) { //개인
+            $('#agencyF').show();
+            $('#agencyT').hide();
+        } else {
+            $('#agencyF').hide();
+            $('#agencyT').show();
+        }
+    }
+    </script>
+
+
+<body>
+<!-- 네비바 -->
+<div id="header">
+    <div id="nav">
+        <a href="/">
+            <img id="logo" src="img/Artboard Copy 10@3x.png" height="35">
+        </a>
+        <ul id="menu">
+            <li><a href="/loan">대출하기</a></li>
+            <li><a href="/invest">투자하기</a></li>
+            <li><a sec:authorize="isAuthenticated()" href="/mypage">마이페이지</a></li>
+            <li><a sec:authorize="isAnonymous()" href="/signup">회원가입</a></li>
+            <li><a sec:authorize="isAnonymous()" href="/login">로그인</a></li>
+            <li><a sec:authorize="hasRole('ROLE_ADMIN')" href="/admin">관리자</a></li>
+            <li><a sec:authorize="hasAnyRole('ROLE_USER','ROLE_ADMIN')" href="/logout">로그아웃</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<hr class="one">
+
+
+<!-- 대출신청 -->
+<div id="top_bar">
+<h1>대출 신청</h1>
+<h4>아래 정보를 입력한 후, 대출 신청 버튼을 눌러주세요. 대출 심사 결과는 영업기준일 00일 내로 전송됩니다.</h4>
+
+<div id="main_content">
+    <form th:action="@{/loan-apply}" method="POST">
+
+        <!-- 이메일 -->
+        <div id="email">
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>이메일</p>
+            <input type="text" name="email" placeholder="서류제출사항이 안내됩니다."> <br>
+        </div>
+
+        <!-- 개인, MCN -->
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+        <div id="check">
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-bottom: 20px;" float:>직업구분</p>
+            <input type="radio" id="af" name="agency" checked="checked" value="false" onchange="setDisplay()"><span>개인</span><br>
+            <input type="radio" id="at" name="agency" value="true" onchange="setDisplay()"><span>소속</span><br>
+        </div>
+            
+        <div id="agencyF">
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-top: 20px;" float:>사업자 번호</p>
+            <input type="text" name="businessNumber"> <br>
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>상호명</p>
+            <input type="text" name="businessName"> <br>
+        </div>
+                                    
+        <div id="agencyT" style="display:none;">                           
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-top: 20px;" float:>소속 회사명</p>                            
+            <input type="text" name="companyName" placeholder="ex: (주)머니튜브"> <br>                           
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041;" float:>정산일</p>                            
+            <input type="text" name="companyPayday" placeholder="ex: 매달 15일"> <br>
+        </div>
+        
+        <!-- 기타정보 -->
+
+        <div id="etc">
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-top: 60px;" float:>채널 주소 ("https://www.youtube.com/channel/..." 뒤의 키)</p>  
+            <input type="text" name="channelAddress"> <br>
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-top: 20px;" float:>채널 이름</p>
+            <input type="text" name="channelName"><br>
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-top: 20px;" float:>카테고리</p>
+            <input type="text" name="loanCategory"> <br>
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-top: 20px;" float:>대출 상세 사유</p>
+            <input type="text" name="reasonForLoan"> <br>                   
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-top: 20px;" float:>희망 대출 금액</p>                   
+            <input type="number" name="loanAmount"> <br>                    
+            <p style="font-family: 'NanumSquare'; font-size: 12px; font-weight: bold; color: #404041; margin-top: 20px;" float:>상환 날짜</p>                    
+            <input type="date" name="repayAt"> <br>
+        </div>
+          
+        <!-- 신청버튼 -->
+        <button id="loan_btn" type="submit">신청하기</button>
+    </form>
+    </div>
+</div>
+
+
+
+
+<!-- Javascript -->
+<script type="text/javascript" th:src="@{/js/func.js}"></script>
+</body>
+</html>

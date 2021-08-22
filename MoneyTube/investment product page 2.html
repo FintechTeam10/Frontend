@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>채널을 자산으로, 머니튜브(Money Tube) 마이페이지</title>
+        <link rel="stylesheet" href="investment product page 2.css">
+    </head>
+
+    <body>
+    
+        <!--네비 바-->
+
+        <div id="header">    
+            <div id="nav">  
+                    <img id="logo" src="img/Artboard Copy 10@3x.png" height="35">
+                    <ul id="menu">
+                        <li><a href="loan.html">대출하기</a></li>
+                        <li><a href="Investment.html" style="color: blue; font-weight: bold;">투자하기</a></li>
+                        <li><a href="Mypage.html">마이페이지</a></li>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="Sign.html">회원가입</a></li>
+                    </ul>
+            </div> 
+        </div>
+        
+        <hr class="one">
+
+        <!--크리에이터 설명 좌측 메뉴 바-->
+
+        <div id=left_bar>
+            <img id="person_image" src="img/person_image1.png" width="165" height="165">
+            
+            <div id="name">
+                여락이들
+            </div>
+            <br>
+
+            <div id="english_name">
+                YRACK
+            </div>
+
+            <img id="grade" src="img/goldmark.png" width="70" height="70">  
+
+            <div id="createrinfo">
+                <a style="color: blue; font-weight: bold;">구독자 수&nbsp; </a>10.6M<br>
+                <a style="color: blue; font-weight: bold;">평균 조회 수&nbsp; </a>6M<br>
+                <a style="color: blue; font-weight: bold;">지역 랭킹&nbsp; </a>64<br>
+            </div>
+
+            <div id="detail">
+                <div id="money">
+                    <h th:text="${loan.channelName}"></h>
+                    대출 희망 금액 <h th:text="${loan.loanAmount}"></h><br>
+                    상환 날짜 <h th:text="${loan.repayAt}"></h>
+                </div>
+
+                <div id="money2">
+                    모인금액 <p th:text="${approvedLoan.collectedAmount}"></p>
+                    상환금액 <p th:text="${approvedLoan.repayment}"></p>
+                </div>
+                
+                <div id="positivenum">
+                    긍정적 언급수 <p th:text="${crawled.positiveNum}"></p>
+                    부정적 언급수 <p th:text="${crawled.negativeNum}"></p>
+                    중립적 언급수 <p th:text="${crawled.neutralNum}"></p>
+                </div>
+
+                <div id="number">
+                    순위 <p th:text="${crawled.rank}"></p>
+                    구독자수 <p th:text="${crawled.subscriber}"></p>
+                    조회수 <p th:text="${crawled.view}"></p>
+                    평균조회수 <p th:text="${crawled.avgView}"></p>
+                    동영상수 <p th:text="${crawled.video}"></p>
+                    라이브 수입 <p th:text="${crawled.liveIncome}"></p>
+                    녹스 점수 <p th:text="${crawled.noxScore}"></p>
+                </div>
+                
+
+
+            </div>
+        </div>
+
+        <!--고객별 상단 안내 바-->
+        
+        <div id="top_bar">     
+            <div id="early_remarks">
+                한 편의 영화같은 3개월, 제주살이 브이로그
+            </div>
+            <br><br>
+
+            <div id="current_status">
+                크리에이터 조서아님이 신청하신 여행 콘텐츠 제작 투자상품이며 투자가능 기간이 30일 남았습니다.  
+            </div>
+
+        <!--대출금액과 상환금액 표시-->
+
+        <div id="creatersum_box">
+            <div id="lendingrate">
+                <a style = "font-size: 15px;">예상 수익률&nbsp;&nbsp;</a>3.9% - 4.1%
+            </div>
+            
+            <div id="producttag">
+                #콘텐츠투자상품&nbsp; #여행유튜버&nbsp; #국내여행&nbsp; #세달살기&nbsp; #힐링콘텐츠&nbsp; #영상콘텐츠제작지원
+            </div>
+
+            <div id="communityAll" style="padding-top:20px;">
+                <img id="star" src="img/star.png" width="120" style="margin-top:-22px;">
+
+                <div id="community">
+                    상품에 참여한 투자자 커뮤니티 보기
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- 투자하기 -->
+            <div id="invest_box">
+                <div id="investMoney">
+                    <h th:text="${loan.userId}"></h>
+                    <form th:action="@{/invest-details/{id}(id=${approvedLoan.seq})}" method="POST">
+                     투자 금액 <br> <input type="number" name="invAmount" placeholder="투자하실 금액을 입력해주세요!" style="float:left;"> <p style="float:left; margin-left:10px; font-family: 'NanumSquare'; color:#404041; padding:2px;">원</p>
+               
+                    <div id=btn0>
+                    <button id="btn1" type="submit">투자하기</button> <br>
+                    
+                    <span><u>투자약관안내</u></span>
+                    </div>
+                
+                    </form>
+                </div>
+            </div>
+        </div>
+
+            
+
+
+
+        </div>
+
+
+        <!-- 투자하기 푸터 -->
+
+        <br>
+        
+    </body>
+</html>

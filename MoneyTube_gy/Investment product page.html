@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>채널을 자산으로, 머니튜브(Money Tube) 투자상품 페이지</title>
+        <link rel="stylesheet" href="Investment product page.css">
+    </head>
+
+    <body>
+    
+        <!--네비 바-->
+
+        <div id="header">    
+            <div id="nav">  
+                    <img id="logo" src="img/Artboard Copy 10@3x.png" height="35">
+                    <ul id="menu">
+                        <li><a href="Loan.html">대출하기</a></li>
+                        <li><a href="Investment.html" style="color: blue; font-weight: bold;">투자하기</a></li>
+                        <li><a href="Mypage.html" >마이페이지</a></li>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="Sign.html">회원가입</a></li>
+                    </ul>
+            </div> 
+        </div>
+        
+        <hr class="one">
+
+        <!--상품 안내 상단 안내 바-->
+        
+        <div id="top_bar">	
+            <div id=searchbar>
+            </div class="container">
+                <form class="box">
+                    <input type="text" placeholder="원하시는 투자상품을 검색하세요">
+                </form>
+        
+            <button id="btn1">
+                검색
+            </button>
+            </div>
+        </div>
+
+        <!--투자상품 종목별 메뉴 바-->
+
+        <div id="manu_box">
+            <img id="icon1" src="img/grinning-face_1f6001.png" width="35" height="35">
+            <img id="icon2" src="img/airplane_2708-fe0f.png" width="35" height="35">
+            <img id="icon2" src="img/person-bouncing-ball_26f9-fe0f.png" width="35" height="35">
+            <img id="icon2" src="img/musical-note_1f3b5.png" width="35" height="35">
+            <img id="icon2" src="img/artist-palette_1f3a8.png" width="35" height="35">
+            <img id="icon2" src="img/steaming-bowl_1f35c.png" width="35" height="35">
+            <img id="icon2" src="img/dog_1f415.png" width="35" height="35">
+            <img id="icon2" src="img/joystick_1f579-fe0f.png" width="35" height="35">
+            <img id="icon2" src="img/pencil_270f-fe0f.png" width="35" height="35">
+            <img id="icon2" src="img/clapping-hands_light-skin-tone_1f44f-1f3fb_1f3fb.png" width="35" height="35">
+            
+            <ul id="product_manu">
+                <li><a >개인</a></li>
+                <li><a style="color: blue; font-weight: bold;">여행</a></li>
+                <li><a >운동</a></li>
+                <li><a >음악</a></li>
+                <li><a >예술</a></li>
+                <li><a >요리</a></li>
+                <li><a >동물</a></li>
+                <li><a >게임</a></li>
+                <li><a >공부</a></li>
+                <li><a >기타</a></li>
+            </ul>
+        </div>
+
+        <!--투자 모집 상품 리스트 안내-->
+
+        <div id="info">
+            현재 여행 카테고리 내 인기있는 투자상품입니다.
+        </div>
+
+        <div id="listbox1">
+            <div id="seq">
+                <a style="color: blue; font-weight: bold;">상품코드&nbsp; </a>#005890
+            </div>
+
+            <img id=icon1_1 src="img/herb_1f33f.png" width="25" height="25">
+            
+            <div id="listname1_1">
+                한 편의 영화같은 3개월, 제주살이 브이로그
+            </div>
+
+            <div id="product_link">
+                투자 상품 페이지 바로가기 >
+            </div>
+
+            <div id="recruitment">
+                <a style="color: blue; font-weight: bold;">투자 모집비율</a>
+            
+            </div>
+            <style>
+                .graph {
+                    margin-left: 118px;
+                    margin-top: -13px;
+                    height: 10px;
+                    background: #eaeaea;
+                    border-radius: 10px;
+                    width: 35%;
+                }
+                .graph span {
+                    display: block;
+                    padding: 0 10px;
+                    height: 10px;
+                    line-height: 10px;
+                    background: rgb(45, 107, 241);
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    color: #fff;}
+
+                    .graph.stack1 span {animation: stack1 1.5s 1;}
+
+                @keyframes stack1{
+                    0% {width: 0; 
+                        color: rgba(255, 255, 255, 0);}
+                    100% {width: 80%;
+                        color: rgba(255, 255, 255, 1);}
+                    }
+            </style>
+    
+            <div class="graph stack1">
+                <span style="width: 80%;">&nbsp;</span>
+            </div>
+
+            <div id="interestrate">
+                <a style="color: blue; font-weight: bold;">투자 상품이율&nbsp;</a> 3.9%
+            </div>
+
+            <div id="investAt">
+                <a style="color: blue; font-weight: bold;">투자 기간&nbsp;</a> 2021/07/25 - 2021/08/25
+            </div>
+        </div>
+
+        <div id="listbox2">
+            <div id="seq">
+                <a style="color: blue; font-weight: bold;">상품코드&nbsp; </a>#006328
+            </div>
+
+            <img id=icon1_2 src="img/automobile_1f697.png" width="25" height="25">
+            
+            <div id="listname1_2">
+                코로나가 두렵다면 이색적인 국내 차박여행기 
+            </div>
+
+            <div id="product_link">
+                투자 상품 페이지 바로가기 >
+            </div>
+
+            <div id="recruitment">
+                <a style="color: blue; font-weight: bold;">투자 모집비율</a>
+            
+            </div>
+            <style>
+                .graph {
+                    margin-left: 118px;
+                    margin-top: -13px;
+                    height: 10px;
+                    background: #eaeaea;
+                    border-radius: 10px;
+                    width: 35%;
+                }
+                .graph span {
+                    display: block;
+                    padding: 0 10px;
+                    height: 10px;
+                    line-height: 10px;
+                    background: rgb(45, 107, 241);
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    color: #fff;}
+
+                    .graph.stack2 span {animation: stack2 1.5s 1;}
+
+                @keyframes stack2{
+                    0% {width: 0; 
+                        color: rgba(255, 255, 255, 0);}
+                    100% {width: 62%;
+                        color: rgba(255, 255, 255, 1);}
+                    }
+            </style>
+    
+            <div class="graph stack2">
+                <span style="width: 62%;">&nbsp;</span>
+            </div>
+
+            <div id="interestrate">
+                <a style="color: blue; font-weight: bold;">투자 상품이율&nbsp;</a> 3.3%
+            </div>
+
+            <div id="investAt">
+                <a style="color: blue; font-weight: bold;">투자 기간&nbsp;</a> 2021/08/09 - 2021/09/09
+            </div>
+        </div>
+
+        <div id="listbox3">
+            <div id="seq">
+                <a style="color: blue; font-weight: bold;">상품코드&nbsp; </a>#006931
+            </div>
+
+            <img id=icon1_3 src="img/sun-behind-small-cloud_1f324-fe0f.png" width="25" height="25">
+            
+            <div id="listname1_3">
+                여름 기운 완연한 날, 강릉 힐링여행
+            </div>
+
+            <div id="product_link">
+                투자 상품 페이지 바로가기 >
+            </div>
+
+            <div id="recruitment">
+                <a style="color: blue; font-weight: bold;">투자 모집비율</a>
+            
+            </div>
+            <style>
+                .graph {
+                    margin-left: 118px;
+                    margin-top: -13px;
+                    height: 10px;
+                    background: #eaeaea;
+                    border-radius: 10px;
+                    width: 35%;
+                }
+                .graph span {
+                    display: block;
+                    padding: 0 10px;
+                    height: 10px;
+                    line-height: 10px;
+                    background: rgb(45, 107, 241);
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    color: #fff;}
+
+                    .graph.stack3 span {animation: stack3 1.5s 1;}
+
+                @keyframes stack3{
+                    0% {width: 0; 
+                        color: rgba(255, 255, 255, 0);}
+                    100% {width: 92%;
+                        color: rgba(255, 255, 255, 1);}
+                    }
+            </style>
+    
+            <div class="graph stack3">
+                <span style="width: 92%;">&nbsp;</span>
+            </div>
+
+            <div id="interestrate">
+                <a style="color: blue; font-weight: bold;">투자 상품이율&nbsp;</a> 4.4%
+            </div>
+
+            <div id="investAt">
+                <a style="color: blue; font-weight: bold;">투자 기간&nbsp;</a> 2021/08/18 - 2021/09/18
+            </div>
+        </div>
+
+        <div id="listbox4">
+            <div id="seq">
+                <a style="color: blue; font-weight: bold;">상품코드&nbsp; </a>#007317
+            </div>
+
+            <img id=icon1_4 src="img/beach-with-umbrella_1f3d6-fe0f.png" width="25" height="25">
+            
+            <div id="listname1_4">
+                홀로서기 - 혼자 여행하고 싶은 사람들을 위한 안내서
+            </div>
+
+            <div id="product_link">
+                투자 상품 페이지 바로가기 >
+            </div>
+
+            <div id="recruitment">
+                <a style="color: blue; font-weight: bold;">투자 모집비율</a>
+            
+            </div>
+            <style>
+                .graph {
+                    margin-left: 118px;
+                    margin-top: -13px;
+                    height: 10px;
+                    background: #eaeaea;
+                    border-radius: 10px;
+                    width: 35%;
+                }
+                .graph span {
+                    display: block;
+                    padding: 0 10px;
+                    height: 10px;
+                    line-height: 10px;
+                    background: rgb(45, 107, 241);
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    color: #fff;}
+
+                    .graph.stack4 span {animation: stack4 1.5s 1;}
+
+                @keyframes stack4{
+                    0% {width: 0; 
+                        color: rgba(255, 255, 255, 0);}
+                    100% {width: 73%;
+                        color: rgba(255, 255, 255, 1);}
+                    }
+            </style>
+    
+            <div class="graph stack4">
+                <span style="width: 73%;">&nbsp;</span>
+            </div>
+
+            <div id="interestrate">
+                <a style="color: blue; font-weight: bold;">투자 상품이율&nbsp;</a> 3.8%
+            </div>
+
+            <div id="investAt">
+                <a style="color: blue; font-weight: bold;">투자 기간&nbsp;</a> 2021/08/21 - 2021/09/21
+            </div>
+        </div>
+
+
+        
